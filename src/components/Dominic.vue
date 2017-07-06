@@ -14,6 +14,7 @@
     </div>
     <div>
       <button v-on:click="reverseMessage">Reverse</button>
+      <button v-on:click="goHome">Home</button>
     </div>
   </div>
 </template>
@@ -39,6 +40,9 @@ export default {
       this.msg = this.msg.split('').reverse().join('')
       this.message = this.message.split('').reverse().join('')
       this.seen = !this.seen
+    },
+    goHome () {
+      this.$router.push('/')
     }
   }
 }
